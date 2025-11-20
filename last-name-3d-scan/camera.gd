@@ -35,6 +35,11 @@ func _input(event):
 	# Receives mouse button input
 	if event is InputEventMouseButton:
 		match event.button_index:
+			MOUSE_BUTTON_LEFT:
+				await RenderingServer.frame_post_draw
+				var texture := get_viewport().get_texture()
+				var image := texture.get_image()
+				image.save_png(OS.get_system_dir(OS.SYSTEM_DIR_DESKTOP) + "/3Dscreenshot.png")
 			MOUSE_BUTTON_RIGHT: # Only allows rotation if right click down
 				Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED if event.pressed else Input.MOUSE_MODE_VISIBLE)
 			MOUSE_BUTTON_WHEEL_UP: # Increases max velocity
