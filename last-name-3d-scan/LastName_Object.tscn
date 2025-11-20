@@ -24,3 +24,5 @@ spot_angle = 16.17
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_0i2xx")
+
+[node name="BodyScan" type="MeshInstance3D" parent="."]
