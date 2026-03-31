@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cqav0w5q1vgx8"]
+[gd_scene format=3 uid="uid://cqav0w5q1vgx8"]
 
 [ext_resource type="Script" uid="uid://0k0wtox4vh3q" path="res://camera.gd" id="1_5xaok"]
 [ext_resource type="Script" uid="uid://bcjw64movxe8d" path="res://audio_stream_player_3d.gd" id="2_5xaok"]
@@ -11,28 +11,27 @@ ambient_light_source = 1
 
 [sub_resource type="BoxMesh" id="BoxMesh_5xaok"]
 
-[node name="World" type="Node3D"]
+[node name="World" type="Node3D" unique_id=1821054163]
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1011954006]
 transform = Transform3D(1, 0, 0, 0, 0.95770204, 0.28776172, 0, -0.28776172, 0.95770204, 0, 0.8098599, 1.8672388)
 script = ExtResource("1_5xaok")
-sensitivity = 0.01
 
-[node name="Lights" type="Node3D" parent="."]
+[node name="Lights" type="Node3D" parent="." unique_id=1925352903]
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Lights"]
+[node name="SpotLight3D" type="SpotLight3D" parent="Lights" unique_id=886133368]
 transform = Transform3D(-0.7140487, -0.6580615, -0.23893419, 0.50192267, -0.71911484, 0.48057, -0.48806572, 0.22322387, 0.843779, 0, 1.6726086, 2.6087248)
 spot_range = 3.1112494
 spot_attenuation = 1.29
 spot_angle = 29.635345
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=6823915]
 autoplay = true
 script = ExtResource("2_5xaok")
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1903973148]
 environment = SubResource("Environment_0i2xx")
 
-[node name="BodyScan" type="MeshInstance3D" parent="."]
+[node name="BodyScan" type="MeshInstance3D" parent="." unique_id=2027879334]
 material_override = SubResource("StandardMaterial3D_5xaok")
 mesh = SubResource("BoxMesh_5xaok")

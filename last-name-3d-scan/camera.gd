@@ -4,7 +4,7 @@ class_name FreeLookCamera extends Camera3D
 const SHIFT_MULTIPLIER = 2.5
 const ALT_MULTIPLIER = 1.0 / SHIFT_MULTIPLIER
 
-@export_range(0.0, 1.0) var sensitivity = 0.001
+@export_range(0.0, 1.0) var sensitivity = 0.01
 
 # Mouse state
 var _mouse_position = Vector2(0.0, 0.0)
@@ -15,7 +15,7 @@ var _direction = Vector3(0.0, 0.0, 0.0)
 var _velocity = Vector3(0.0, 0.0, 0.0)
 var _acceleration = 30
 var _deceleration = -10
-var _vel_multiplier = .02
+var _vel_multiplier = 2
 
 # Keyboard state
 var _w = false
